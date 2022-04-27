@@ -17,5 +17,11 @@ C / C++ tutorial with ROOT
 
 ### Procedure
   1. Rectifying
-  2. Preprocessing
-  3. Analysis
+    i. signal vs noise
+  3. Preprocessing
+    i. pedestal removal
+    ii. invert to ADC
+      1) Considerartion about data structure
+      2) Build IO class
+      3) Build preprocessing class
+  5. Analysis
