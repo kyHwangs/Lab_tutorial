@@ -9,3 +9,11 @@ C / C++ tutorial with ROOT
 2. get familar to complier
 > ?
 3. ?
+
+* * *
+
+## Data set
+* Test DAQ messy samples
+* 1. Rectifying
+* 2. Preprocessing
+* 3. Analysis
