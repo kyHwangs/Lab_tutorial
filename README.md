@@ -16,6 +16,6 @@ C / C++ tutorial with ROOT
 * Test DAQ messy samples
 
 ### Procedure
-  * 1. Rectifying
-  * 2. Preprocessing
-  * 3. Analysis
+  1. Rectifying
+  2. Preprocessing
+  3. Analysis
