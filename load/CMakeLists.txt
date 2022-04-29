@@ -9,7 +9,7 @@ file(GLOB sources
   ${PROJECT_SOURCE_DIR}/src/*.cc
 )
 file(GLOB headers
-  ${PROJECT_SOURCE_DIR}/include/*.h
+  ${PROJECT_SOURCE_DIR}/include/*.hh
 )
 
 include(${ROOT_USE_FILE})

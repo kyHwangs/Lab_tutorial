@@ -13,16 +13,17 @@
 #include <iostream>
 #include <string>
 
-LoadingRawData::LoadingRawData()
-: fnevt(0), fevt(0), fInputFile(0), {
+LoadingRawData::LoadingRawData(TString filename)
+: fnevt(0), fevt(0), fInputFile(0), fFilename(filename) {
 
     // Set_fnevt(0);
     // Set_evt(0);
+    // SetTemp(0);
 
-    SetTemp(0);
     Set_channel(0);
     Set_ch_to_plot(0);
-    Set_file_size(0);
+    Set_nevt(0);
+    Set_evt(0);
     Set_data_length(0);
     Set_run_number(0);
     Set_tcb_trig_type(0);
@@ -35,14 +36,15 @@ LoadingRawData::LoadingRawData()
     Set_diff_time(0);
     Set_fine_time(0);
     Set_coarse_time(0);
-    Set_channel(0);
+
+    OpenFile(fFilename);
 }
 
 LoadingRawData::~LoadingRawData() {
     fclose(fInputFile);
 }
 
-LoadingRawData::OpenFile(TString filename) {
+void LoadingRawData::OpenFile(TString filename) {
 
     fInputFile = fopen(filename.Data(), "rb");
     fseek(fInputFile, 0L, SEEK_END);

@@ -1,4 +1,4 @@
-#include "loading.h"
+#include "loading.hh"
 
 #include "TROOT.h"
 #include "TStyle.h"
@@ -18,4 +18,6 @@ int main(int argc, char* argv[]) {
   float low = std::stof(argv[2]);
   float high = std::stof(argv[3]);
 
+  LoadingRawData* loading = new LoadingRawData(filename);
+  
 }

@@ -1,22 +1,20 @@
-#ifndef loading_h
-#define loading_h 1
+#ifndef loading_hh
+#define loading_hh 1
 
 #include <string>
 #include <vector>
 #include <iostream>
 #include <fstream>
 #include <cstdio>
+#include "TH1.h"
 
 using namespace std;
 
 class LoadingRawData{
 public:
 
-    LoadingRawData();
+    LoadingRawData(TString filename);
     virtual ~LoadingRawData();
-
-	void OpenFile(TString filename);
-
 
 	void Set_channel( int channel ) { fchannel = channel; }
 	int Get_channel() { return fchannel; }
@@ -56,9 +54,11 @@ public:
 	void Set_coarse_time( long long coarse_time ) { fcoarse_time = coarse_time; }
 	long long Get_coarse_time() { return fcoarse_time; }
 
+	
 private:
 
 	FILE *fInputFile;
+	TString fFilename;
 
 	char data[64];
 	short adc[32736];
@@ -89,6 +89,8 @@ private:
 	long long fltmp;
 	int i;
 	int cont;
-}
+
+	void OpenFile(TString filename);
+};
 
 #endif
