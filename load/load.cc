@@ -19,5 +19,5 @@ int main(int argc, char* argv[]) {
   float high = std::stof(argv[3]);
 
   LoadingRawData* loading = new LoadingRawData(filename);
-  
+  std::cout << "test" << std::endl; 
 }
